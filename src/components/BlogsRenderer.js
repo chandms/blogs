@@ -14,8 +14,8 @@ export default function BlogRenderer(){
 
     const components = {
         empty: EmptyBlog,
-        first : MedianOfTwoSortedArrays,
-        second : SecondBlog
+        leetcode4 : MedianOfTwoSortedArrays,
+        upcoming : SecondBlog
     };
 
     return (
