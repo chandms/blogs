@@ -1,10 +1,10 @@
-import Blogs from "./components/Blogs";
+import BlogRenderer from "./components/BlogsRenderer";
 
 
 
 
 function App() {
-  return (<Blogs/>);
+  return (<BlogRenderer/>);
 }
 
 export default App;

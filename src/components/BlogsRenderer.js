@@ -1,40 +1,33 @@
 import Collapsible from 'react-collapsible';
-import React, { useState, useEffect } from 'react';
-import Markdown from 'markdown-to-jsx';
+import React, { useState } from 'react';
 import { ArrowsExpandIcon} from "@heroicons/react/solid";
 import Header from './Header';
-import files from '../jsons/markdown_list.json';
+import blogs from '../jsons/blog_list.json';
+import FirstBlog from './Blogs/FirstBlog';
+import SecondBlog from './Blogs/SecondBlog';
+import EmptyBlog from './Blogs/EmptyBlog';
 
-
-export default function Blogs(){
-
-    const markdown_files = files.files
-    const [post, setPost] = useState('');
-    const [mdFile, setMdfile] = useState('Nothing.md');
+export default function BlogRenderer(){
+    const blog_files = blogs.blogs;
+    const [blog, setBlog] = useState('empty');
     const [showModal, setShowModal] = React.useState(false);
 
-    
-    useEffect(() => {
-        import(`../markdown/${mdFile}`)
-          .then(res => {
-            fetch(res.default)
-              .then(res => res.text())
-              .then(res => {setPost(res)})
-              .catch(err => console.log(err));
-          })
-          .catch(err => console.log(err));
-      },[mdFile]);
+    const components = {
+        empty: EmptyBlog,
+        first : FirstBlog,
+        second : SecondBlog
+    };
 
     return (
-    <div>
-    <Header/>
-    <div className='mt-2 bg-lime-200 shadow-lg'>
-        <div className="container flex flex-row flex-wrap place-content-around pt-2">
-            {markdown_files.map((mdF )=>(
-                    <div key={mdF} className='m-auto font-mono text-white'>
+        <div>
+        <Header/>
+        <div className='mt-2 h-16 bg-lime-200 shadow-lg'>
+        <div className="flex flex-row flex-wrap place-content-around pt-2 pb-2">
+            {blog_files.map(( cur_blog )=>(
+                    <div key={cur_blog} className='m-auto font-mono text-white'>
                         <button className="bg-transparent hover:bg-blue-500 text-blue-700 
                         font-semibold hover:text-white py-2 px-4 border border-blue-500 
-                        hover:border-transparent rounded w-fit" onClick={()=>{setMdfile(mdF);setShowModal(true);}}>{mdF.split('.')[0]}</button>
+                        hover:border-transparent rounded w-fit" onClick={()=>{setBlog(cur_blog);setShowModal(true);}}>{cur_blog}</button>
         {showModal ? (
         <>
           <div
@@ -46,7 +39,7 @@ export default function Blogs(){
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="text-fuchsia-900 text-lg leading-relaxed">
-                    Selected Blog - {mdFile.split('.')[0]}
+                    Selected Blog - {blog}
                   </p>
                   <p className='text-slate-500 text-sm leading-relaxed'>click the expand arrow to read/close</p>
                 </div>
@@ -71,11 +64,18 @@ export default function Blogs(){
             
         </div>
     </div>
-    <div className='mt-2 bg-slate-400 shadow-lg'>
-            <Collapsible trigger={<ArrowsExpandIcon className="w-10 h-10 mx-auto text-center hover:bg-indigo-700 rounded " />}>
-                                <Markdown className='mt-2 bg-pink-100'>{post}</Markdown>
-            </Collapsible>
-        </div>
+    <div className='mt-2 bg-slate-500 shadow-lg'>
+        <Collapsible trigger={<ArrowsExpandIcon className="w-10 h-10 mx-auto text-center hover:bg-indigo-700 rounded " />}>
+        
+        {(() => {
+            const SpecificBlog = components[blog];
+            return <SpecificBlog/>
+             
+        })()}
+                                
+        </Collapsible>
+
+    </div>
     </div>
     );
 }
