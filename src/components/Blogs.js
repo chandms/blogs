@@ -13,6 +13,7 @@ export default function Blogs(){
     const [mdFile, setMdfile] = useState('Nothing.md');
     const [showModal, setShowModal] = React.useState(false);
 
+    
     useEffect(() => {
         import(`../markdown/${mdFile}`)
           .then(res => {
