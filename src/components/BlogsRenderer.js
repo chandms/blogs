@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ArrowsExpandIcon} from "@heroicons/react/solid";
 import Header from './Header';
 import blogs from '../jsons/blog_list.json';
-import FirstBlog from './Blogs/FirstBlog';
+import MedianOfTwoSortedArrays from './Blogs/MedianTwoSortedArrays';
 import SecondBlog from './Blogs/SecondBlog';
 import EmptyBlog from './Blogs/EmptyBlog';
 
@@ -14,7 +14,7 @@ export default function BlogRenderer(){
 
     const components = {
         empty: EmptyBlog,
-        first : FirstBlog,
+        first : MedianOfTwoSortedArrays,
         second : SecondBlog
     };
 
@@ -64,7 +64,7 @@ export default function BlogRenderer(){
             
         </div>
     </div>
-    <div className='mt-2 bg-slate-500 shadow-lg'>
+    <div className='mt-2 bg-neutral-200 shadow-lg'>
         <Collapsible trigger={<ArrowsExpandIcon className="w-10 h-10 mx-auto text-center hover:bg-indigo-700 rounded " />}>
         
         {(() => {
