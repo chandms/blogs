@@ -14,25 +14,26 @@ export default function ProgrammingProblems(){
 
     return (
     <div className='bg-teal-100'>
-        <h1 className='font-bold text-indigo-700 antialiased hover:subpixel-antialiased'> Some interesting interview questions!! </h1>
+        <h1 className='h-auto py-2 flex justify-around  font-bold text-indigo-700 antialiased hover:subpixel-antialiased'> Some interesting interview questions!! </h1>
     <div>
     <br></br>
     </div>
     <div className='flex flex-col flex-wrap'>
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='flex flex-row flex-wrap justify-around'>
             
             <div><button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-fit" onClick={()=>{setSpecificBlog('leetcode4');}}>Median of Two Sorted Arrays</button> </div>
             <p className='inline-flex items-center '> Date - Jan 1, 2023</p>
 
         </div>
         <br></br>
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='flex flex-row flex-wrap justify-around'>
             
             <div><button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-fit" onClick={()=>{setSpecificBlog('upcoming');}}>Upcoming Blog</button> </div>
-            <p className='inline-flex items-center '> Date - Jan 1, 2023</p>
+            <p className='inline-flex items-center '> Date - </p>
 
         </div>
         <div>
+        <br></br>
         {(() => {
             const SelectedBlog = components[specificBlog];
             return <SelectedBlog/>
