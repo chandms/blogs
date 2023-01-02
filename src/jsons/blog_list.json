@@ -1,7 +1,10 @@
 {
     "blogs": [
-        "leetcode4", 
-        "upcoming"
+        "Programming Problems",
+        "Development",
+        "System Design",
+        "Computer Security",
+        "Personal"
 
     ]
 }

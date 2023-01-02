@@ -3,9 +3,13 @@ import React, { useState } from 'react';
 import { ArrowsExpandIcon} from "@heroicons/react/solid";
 import Header from './Header';
 import blogs from '../jsons/blog_list.json';
-import MedianOfTwoSortedArrays from './Blogs/MedianTwoSortedArrays';
-import SecondBlog from './Blogs/SecondBlog';
 import EmptyBlog from './Blogs/EmptyBlog';
+import ProgrammingProblems from './Blogs/ProgrammingProblems';
+import Development from './Blogs/Development';
+import SystemDesign from './Blogs/SystemDesign';
+import Security from './Blogs/Security';
+import Personal from './Blogs/Personal';
+
 
 export default function BlogRenderer(){
     const blog_files = blogs.blogs;
@@ -14,20 +18,23 @@ export default function BlogRenderer(){
 
     const components = {
         empty: EmptyBlog,
-        leetcode4 : MedianOfTwoSortedArrays,
-        upcoming : SecondBlog
+        ProgrammingProblems : ProgrammingProblems,
+        Development: Development,
+        SystemDesign: SystemDesign,
+        ComputerSecurity: Security,
+        Personal: Personal,
     };
 
     return (
         <div>
         <Header/>
-        <div className='mt-2 h-16 bg-lime-200 shadow-lg'>
-        <div className="flex flex-row flex-wrap place-content-around pt-2 pb-2">
+        <div className='mt-2 h-auto bg-lime-200 shadow-lg'>
+        <div className="flex flex-col flex-wrap place-content-around pt-2 pb-2">
             {blog_files.map(( cur_blog )=>(
                     <div key={cur_blog} className='m-auto font-mono text-white'>
                         <button className="bg-transparent hover:bg-blue-500 text-blue-700 
                         font-semibold hover:text-white py-2 px-4 border border-blue-500 
-                        hover:border-transparent rounded w-fit" onClick={()=>{setBlog(cur_blog);setShowModal(true);}}>{cur_blog}</button>
+                        hover:border-transparent rounded w-fit mt-1" onClick={()=>{setBlog(cur_blog.split(' ').join(""));setShowModal(true);}}>{cur_blog}</button>
         {showModal ? (
         <>
           <div
