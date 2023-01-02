@@ -1,10 +1,15 @@
 import BlogRenderer from "./components/BlogsRenderer";
+import Footer from "./components/Footer";
 
 
 
 
 function App() {
-  return (<BlogRenderer/>);
+  return (
+  <div>
+    <BlogRenderer/>
+    <Footer/>
+  </div>);
 }
 
 export default App;
