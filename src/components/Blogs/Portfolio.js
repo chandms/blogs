@@ -16,11 +16,11 @@ export default function Portfolio(){
                         content.map((data) => {
                             return (
                                 <div key={data.title}>
-                                    <a href={data["title-href"]} className="h-auto py-2 flex justify-center underline font-mono text-blue-800 font-bold h-12 bg-sky-200"> {data.title} </a>
+                                    <a href={data["title-href"]} target="_blank" rel="noopener noreferrer" className="h-auto py-2 flex justify-center underline font-mono text-blue-800 font-bold h-12 bg-sky-200"> {data.title} </a>
                                     <p className="h-auto py-2 flex justify-center bg-yellow-100 font-serif "> {data.description} </p>
                                      {
                                         data["desc-link"].length>0 ? 
-                                        <a href={data["desc-link"]} className="px-1 underline text-blue-600 flex justify-center  bg-yellow-100 font-serif"> {data["link-desc"]} </a>
+                                        <a href={data["desc-link"]} target="_blank" rel="noopener noreferrer" className="px-1 underline text-blue-600 flex justify-center  bg-yellow-100 font-serif"> {data["link-desc"]} </a>
                                         : <p></p>
                                      }
                                     

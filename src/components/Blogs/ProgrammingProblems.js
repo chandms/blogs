@@ -23,32 +23,31 @@ export default function ProgrammingProblems(){
 
     return (
     <div className='bg-teal-100'>
-        <h1 className='h-auto py-2 flex justify-around  font-bold text-indigo-700 antialiased hover:subpixel-antialiased'> Some interesting leetcode questions!! </h1>
+        <h1 className='h-auto py-2 flex justify-around  font-bold text-indigo-700 antialiased hover:subpixel-antialiased hover:text-pink-400'> Some Interesting Leetcode Questions!! </h1>
     <div>
     <br></br>
     </div>
     <div className='flex flex-col flex-wrap'>
         <div className='flex flex-row flex-wrap justify-around'>
             
-            <div><button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-fit" onClick={()=>{setSpecificBlog('leetcode'); setTitle(problems[0].title); setProbDesc(problems[0].prob_desc); setSolutionDesc(problems[0].solution_desc); setLink(problems[0].link); setCode(median_of_two_sorted_arrays);}}>Median of Two Sorted Arrays</button> </div>
-            <p className='inline-flex items-center '> Date - Jan 1, 2023</p>
+            <div><button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-fit" onClick={()=>{setSpecificBlog('leetcode'); setTitle(problems[0].title); setProbDesc(problems[0].prob_desc); setSolutionDesc(problems[0].solution_desc); setLink(problems[0].link); setCode(median_of_two_sorted_arrays);}}><h1 className='underline font-mono'>Median of Two Sorted Arrays</h1><p className='text-sm'> Date - Jan 1, 2023</p></button> </div>
 
         </div>
         <br></br>
         <div className='flex flex-row flex-wrap justify-around'>
             
-            <div><button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-fit" onClick={()=>{setSpecificBlog('leetcode'); setTitle(problems[1].title); setProbDesc(problems[1].prob_desc); setSolutionDesc(problems[1].solution_desc); setLink(problems[1].link); setCode(min_burst_balloons);}}>Minimum Number of Arrows to Burst Balloons</button> </div>
-            <p className='inline-flex items-center '> Date - Jan 6, 2023</p>
+            <div><button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-fit" onClick={()=>{setSpecificBlog('leetcode'); setTitle(problems[1].title); setProbDesc(problems[1].prob_desc); setSolutionDesc(problems[1].solution_desc); setLink(problems[1].link); setCode(min_burst_balloons);}}><h1 className='underline font-mono'>Minimum Number of Arrows to Burst Balloons</h1><p className='text-sm '> Date - Jan 6, 2023</p></button> </div>
 
         </div>
         <br></br>
         <div className='flex flex-row flex-wrap justify-around'>
             
-            <div><button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-fit" onClick={()=>{setSpecificBlog('upcoming');}}>Upcoming Blog</button> </div>
-            <p className='inline-flex items-center '> Date - </p>
+            <div><button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-fit" onClick={()=>{setSpecificBlog('upcoming');}}> <h1 className=' underline font-mono'>Upcoming Blog </h1><p className='text-sm'> Date - </p></button> </div>
+            
 
         </div>
-        <div>
+    </div>
+    <div>
         <br></br>
         {(() => {
             const SelectedBlog = components[specificBlog];
@@ -56,7 +55,6 @@ export default function ProgrammingProblems(){
              
         })()}
         </div>
-    </div>
     </div>
     );
 }
