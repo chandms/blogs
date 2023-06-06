@@ -4,7 +4,7 @@ import {SocialIcon}  from 'react-social-icons';
 function WorkDescription(){
     return(
         <div className="bg-white">
-            <h1 className="h-auto py-2 px-3 flex font-bold ">With this work, I explored Research Mode Sensors (Accelerometer, Gyroscope, Magnetometer), Eye Tracking and Head Tracking sensors in HoloLens2.</h1>
+            <h1 className="h-auto py-2 px-3 flex font-bold ">With this work, I explored Research Mode sensors (Accelerometer, Gyroscope, Magnetometer), Eye Tracking and Head Tracking sensors in HoloLens2.</h1>
             <p className="h-auto py-2 px-3 justify-around "> 
                 <h1 className="font-bold">Project Description - </h1>In the past few years, we have seen people becoming
                 more interested in the various applications of AR-VR domain.
