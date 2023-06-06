@@ -6,7 +6,6 @@ import blogs from '../jsons/blog_list.json';
 import EmptyBlog from './Blogs/EmptyBlog';
 import ProgrammingProblems from './Blogs/ProgrammingProblems';
 import Development from './Blogs/Development';
-import SystemDesign from './Blogs/SystemDesign';
 import Security from './Blogs/Security';
 import Personal from './Blogs/Personal';
 
@@ -20,7 +19,6 @@ export default function BlogRenderer(){
         empty: EmptyBlog,
         ProgrammingProblems : ProgrammingProblems,
         Development: Development,
-        SystemDesign: SystemDesign,
         ComputerSecurity: Security,
         Personal: Personal,
     };
