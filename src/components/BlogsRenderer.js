@@ -18,9 +18,16 @@ export default function BlogRenderer(){
     const components = {
         empty: EmptyBlog,
         ProgrammingProblems : ProgrammingProblems,
-        Development: Development,
-        ComputerSecurity: Security,
+        SoftwareDevelopment: Development,
+        ResearchWork: Security,
         Personal: Personal,
+    };
+
+    const component_val = {
+      ProgrammingProblems : "Programming Problems",
+      SoftwareDevelopment: "Software Development",
+      ResearchWork: "Research Work",
+      Personal: "Personal",
     };
 
     return (
@@ -44,7 +51,7 @@ export default function BlogRenderer(){
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="text-fuchsia-900 text-lg leading-relaxed">
-                    Selected Blog - {blog}
+                    Selected Blog - {component_val[blog]}
                   </p>
                   <p className='text-slate-500 text-sm leading-relaxed'>click the expand arrow to read/close</p>
                 </div>

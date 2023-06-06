@@ -14,7 +14,7 @@ export default function Development(){
 
     return (
     <div className='bg-teal-100'>
-        <h1 className='h-auto py-2 flex justify-around  font-bold text-indigo-700 antialiased hover:subpixel-antialiased'> Will be updating my learnings related to Software Developmet here!! </h1>
+        <h1 className='h-auto py-2 flex justify-around  font-bold text-indigo-700 antialiased hover:subpixel-antialiased hover:text-pink-400'> Will be updating my learnings related to Software Developmet here!! </h1>
     <div>
     <br></br>
     </div>
