@@ -4,7 +4,7 @@ import {SocialIcon}  from 'react-social-icons';
 function WorkDescription(){
     return(
         <div className="bg-white">
-            <h1 className="h-auto py-2 px-3 flex justify-around font-bold ">With this work, I explored Research Mode Sensors (Accelerometer, Gyroscope, Magnetometer), Eye Tracking and Head Tracking sensors in HoloLens2.</h1>
+            <h1 className="h-auto py-2 px-3 flex font-bold ">With this work, I explored Research Mode Sensors (Accelerometer, Gyroscope, Magnetometer), Eye Tracking and Head Tracking sensors in HoloLens2.</h1>
             <p className="h-auto py-2 px-3 justify-around "> 
                 <h1 className="font-bold">Project Description - </h1>In the past few years, we have seen people becoming
                 more interested in the various applications of AR-VR domain.
@@ -43,11 +43,9 @@ Smart Glasses - </a>
                 in HoloLens2.</p>
             </p>
             <h1 className="h-auto py-2 px-3 justify-around font-bold"> My Contribution - </h1>
-            <a className=" h-auto py-2 px-3 text-blue-900" target="_blank" rel="noreferrer" href="https://github.com/chandms/HoloLens2-ResearchMode-Unity/blob/master/Project%20Report/Final_Project_Report.pdf"> Checkout My Final Project Report </a>
-            <br></br>
-            <a className=" h-auto py-2 px-3  text-blue-900" target="_blank" rel="noreferrer" href="https://github.com/chandms/HoloLens2-ResearchMode-Unity"> GitHub Repo Link </a>
-            <br></br>
-            <p className=" h-auto py-2 px-3">YouTube Presentation <SocialIcon url="https://www.youtube.com/watch?v=PS_Ul74HlYs"/> </p>
+            <p className="h-auto py-2 px-3 ">Check out My <a className="text-blue-900" target="_blank" rel="noreferrer" href="https://github.com/chandms/HoloLens2-ResearchMode-Unity/blob/master/Project%20Report/Final_Project_Report.pdf"> Final Project Report </a></p>
+            <p className="h-auto py-2 px-3 ">GitHub Repo Link &rarr; <SocialIcon  target="_blank" rel="noreferrer" className=" border-0 py-2 px-6 focus:ring hover:bg-gray-400 rounded text-lg mr-5" url="https://github.com/chandms/HoloLens2-ResearchMode-Unity"/> </p>
+            <p className=" h-auto py-2 px-3">YouTube Presentation &rarr; <SocialIcon target="_blank" rel="noreferrer" className=" border-0 py-2 px-6 focus:ring hover:bg-red-200 rounded text-lg mr-5" url="https://www.youtube.com/watch?v=PS_Ul74HlYs"/> </p>
         </div>
     );
 }
